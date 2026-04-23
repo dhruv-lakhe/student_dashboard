@@ -1,0 +1,24 @@
+/# Python virtual environments
+myenv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+
+# Django database and static/media files
+db.sqlite3
+/staticfiles/
+/media/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# IDEs and editors
+.vscode/
