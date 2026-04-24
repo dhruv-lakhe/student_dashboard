@@ -1,3 +1,8 @@
+# Python virtual environments
+myenv/
+env/
+venv/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -133,3 +138,21 @@ staticfiles/
 .vscode/
 .qodo/
 
+=======
+# Environment variables
+.env
+
+# Django database and static/media files
+db.sqlite3
+/staticfiles/
+/media/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# IDEs and editors
+.vscode/
+>>>>>>> 63b16f8d6a760daf7ffbb88db01638d52df3e964
