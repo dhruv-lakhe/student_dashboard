@@ -1,0 +1,8 @@
+# Development / local-only heavy ML dependencies
+# Install these locally for full recommender functionality:
+# pip install -r requirements.txt -r requirements-dev.txt
+
+torch==2.6.0
+transformers==4.51.3
+sentence-transformers==4.1.0
+

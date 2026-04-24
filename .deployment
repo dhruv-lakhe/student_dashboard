@@ -1,2 +1,3 @@
 [config]
-command = startup.ps1
+command = startup.sh
+
