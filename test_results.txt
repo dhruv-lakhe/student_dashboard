@@ -1,0 +1,4 @@
+ERR TimeoutError     http://localhost:8000/
+    timed out
+OK  200  text/css; charset="utf-8"       http://localhost:8000/static/assets/css/dark.min.css
+OK  200  text/javascript; charset="utf-8"  http://localhost:8000/static/assets/js/hope-ui.js
