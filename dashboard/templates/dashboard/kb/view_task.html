@@ -1,0 +1,50 @@
+{% load static %}
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>View Task</title>
+      <link rel="stylesheet" href="{% static 'assets/css/hope-ui.min.css' %}" />
+  </head>
+  <body>
+    <main class="main-content">
+      <div class="conatiner-fluid content-inner mt-n5 py-0">
+        <div class="row">
+          <div class="card">
+            <div class="card-header d-flex justify-content-between">
+              <div class="header-title">
+                <h4 class="card-title">{{ task.title }}</h4>
+                <p class="mb-0 text-muted">{{ task.subject|default:'General' }} • {{ task.priority|title }}</p>
+              </div>
+              <div>
+                <a href="{% url 'edit_task' task.id %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'kanban' %}" class="btn btn-secondary">Back</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p><strong>Description</strong></p>
+              <p>{{ task.description|default:'No description.' }}</p>
+
+              <p><strong>Due date</strong></p>
+              <p>{{ task.due_date|default:'-' }}</p>
+
+              <p><strong>Estimated time (minutes)</strong></p>
+              <p>{{ task.estimated_time|default:'-' }}</p>
+
+              <p><strong>Tags</strong></p>
+              <p>
+                {% for tag in task.tags.all %}
+                  <span class="badge bg-{{ tag.color }}">{{ tag.name }}</span>
+                {% empty %}
+                  -
+                {% endfor %}
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
