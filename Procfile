@@ -1,0 +1,1 @@
+gunicorn student_dashboard.wsgi
