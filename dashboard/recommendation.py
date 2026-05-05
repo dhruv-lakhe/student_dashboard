@@ -10,7 +10,7 @@ df = df.dropna(subset=["course_title"]).drop_duplicates(subset=["course_title"])
 
 # Load model and send to appropriate device
 device = "cuda" if torch.cuda.is_available() else "cpu"
-model = SentenceTransformer('distilbert-base-nli-mean-tokens')
+model = SentenceTransformer('all-MiniLM-L6-v2')
 model = model.to(device)
 
 # Generate embeddings once
